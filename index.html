@@ -1,194 +1,156 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Ménage + Linge – 60€ · Airbnb</title>
-  <meta name="description" content="Forfait ménage + linge pour Airbnb : 60€ TTC par turnover. Paris & proche banlieue. Réservation WhatsApp.">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ménage + Linge – 60€ TTC</title>
   <style>
-    :root{
-      --bg:#f7f7f8;
-      --fg:#0f1720;
-      --muted:#667085;
-      --card:#ffffff;
-      --border:#e5e7eb;
-      --accent:#25D366; /* WhatsApp */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f9f9f9;
+      color: #333;
+      line-height: 1.6;
     }
-    *{box-sizing:border-box}
-    html,body{margin:0;padding:0;background:var(--bg);color:var(--fg);font:16px/1.6 "Inter",system-ui,-apple-system,Segoe UI,Roboto,Arial}
-    a{color:inherit}
-    .wrap{max-width:980px;margin:auto;padding:24px}
-    /* Header */
-    .nav{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.8);backdrop-filter:saturate(180%) blur(8px);border-bottom:1px solid var(--border)}
-    .nav .inner{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:12px 24px;margin:auto;max-width:980px}
-    .brand{display:flex;align-items:center;gap:10px;font-weight:600}
-    .logo{width:32px;height:32px;border:1.5px solid var(--fg);border-radius:12px;display:grid;place-items:center}
-    /* Hero */
-    .hero{display:grid;gap:28px;grid-template-columns:1fr;align-items:center;padding:36px 0}
-    @media(min-width:900px){.hero{grid-template-columns:1.1fr .9fr}}
-    .h1{font-size:clamp(28px,4vw,44px);line-height:1.15;margin:0 0 12px}
-    .lead{color:var(--muted);font-size:18px}
-    .card{background:var(--card);border:1px solid var(--border);border-radius:18px;padding:22px;box-shadow:0 4px 16px rgba(15,23,32,.05)}
-    .price{font-size:40px;font-weight:700;margin:6px 0}
-    .badge{border:1px solid var(--border);background:#fbfbfb;padding:6px 10px;border-radius:10px;font-size:14px}
-    .list{margin:14px 0 0;padding:0;list-style:none;color:#394150}
-    .list li{margin:8px 0}
-    .row{display:flex;flex-wrap:wrap;gap:16px;margin-top:18px}
-    .btn{display:inline-flex;align-items:center;gap:10px;padding:12px 18px;border-radius:12px;border:1.5px solid var(--fg);text-decoration:none;font-weight:600}
-    .btn:hover{background:var(--fg);color:#fff;transition:.2s}
-    .btn-wa{background:var(--accent);border-color:var(--accent);color:#fff}
-    .btn-wa:hover{filter:brightness(.95)}
-    .wa-ico{width:18px;height:18px;display:inline-block}
-    /* Sections */
-    .section{padding:28px 0}
-    .grid{display:grid;gap:16px;grid-template-columns:1fr}
-    @media(min-width:760px){.grid{grid-template-columns:repeat(3,1fr)}}
-    .feature{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:18px}
-    .muted{color:var(--muted)}
-    /* Footer */
-    footer{border-top:1px solid var(--border);color:var(--muted);padding:18px 0;margin-top:32px}
-    .foot-row{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;align-items:center}
-    .small{font-size:14px}
+    header {
+      background: #2e86de;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 28px;
+    }
+    header p {
+      margin: 5px 0 0;
+    }
+    .container {
+      max-width: 900px;
+      margin: 20px auto;
+      padding: 20px;
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    h2 {
+      margin-top: 0;
+      color: #2e86de;
+    }
+    .price-box {
+      border: 2px solid #2e86de;
+      padding: 15px;
+      border-radius: 6px;
+      text-align: center;
+      margin-bottom: 20px;
+      background: #f0f6ff;
+    }
+    .price-box strong {
+      font-size: 24px;
+      color: #2e86de;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 15px;
+      margin: 20px 0;
+    }
+    .card {
+      padding: 15px;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      background: #fafafa;
+    }
+    .btn-whatsapp {
+      display: inline-flex;
+      align-items: center;
+      background: #25d366;
+      color: white;
+      padding: 12px 20px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+      margin-top: 15px;
+      transition: background 0.3s;
+    }
+    .btn-whatsapp:hover {
+      background: #1ebe5d;
+    }
+    .btn-whatsapp img {
+      width: 20px;
+      margin-right: 10px;
+    }
+    footer {
+      background: #333;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 30px;
+    }
   </style>
 </head>
 <body>
-  <!-- Top nav -->
-  <div class="nav">
-    <div class="inner">
-      <div class="brand">
-        <span class="logo">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
-            <path d="M4 12h16M12 4v16"/>
-          </svg>
-        </span>
-        Ménage + Linge · 60€
-      </div>
-      <div class="small">
-        <a href="#offre" style="margin-right:16px">Offre</a>
-        <a href="#zones" style="margin-right:16px">Zones</a>
-        <a href="#contact">Contact</a>
-      </div>
+  <header>
+    <h1>Ménage + Linge – 60€ TTC</h1>
+    <p>Turnover Airbnb simple, rapide et efficace</p>
+  </header>
+
+  <div class="container">
+    <div class="price-box">
+      <p>Forfait unique</p>
+      <strong>60€ TTC</strong><br>
+      <small>Studio / T1 jusqu’à 35 m²</small>
     </div>
-  </div>
 
-  <div class="wrap">
-    <!-- Hero -->
-    <section class="hero">
-      <div>
-        <h1 class="h1">Turnover Airbnb sans prise de tête.</h1>
-        <p class="lead">Forfait simple et clair : <strong>ménage complet + linge</strong> (collecte, lavage, séchage, remise en place). Idéal studios/T1 ≤ 35 m².</p>
-        <div class="row">
-          <a class="btn-wa" href="https://wa.me/33682141764?text=Bonjour%2C+je+souhaite+r%C3%A9server+le+forfait+M%C3%A9nage+%2B+Linge+%C3%A0+60%E2%82%AC+pour+mon+Airbnb." target="_blank" rel="noopener">
-            <svg class="wa-ico" viewBox="0 0 32 32" fill="none">
-              <path fill="white" d="M16 3C9.4 3 4 8.3 4 14.9c0 2.6.9 5 2.4 7L4 29l7.3-2.3c1.9 1 4.1 1.6 6.7 1.6 6.6 0 12-5.3 12-11.9C30 8.3 24.6 3 18 3h-2z"/>
-              <path fill="#25D366" d="M16 5.2c6 0 10.8 4.7 10.8 10.6S22 26.4 16 26.4c-2.2 0-4.2-.6-5.9-1.6l-.4-.2-3.9 1.2 1.3-3.7-.3-.4c-1.3-1.7-2.1-3.8-2.1-6 0-5.9 4.9-10.5 11.1-10.5z"/>
-              <path fill="white" d="M21.9 19.4c-.3-.1-1.8-.9-2.1-1-.3-.1-.5-.1-.7.2s-.8 1-1 .1c-.2-.1-.9-.3-1.7-1.1-.6-.6-1.1-1.3-1.3-1.5-.3-.6 0-.7.2-1 .2-.2.3-.4.5-.6.2-.2.3-.4.5-.7.1-.3 0-.5 0-.7 0-.2-.7-1.7-.9-2.3-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1 2.9 1.1 3.1c.1.2 2 3.2 4.8 4.5 2.8 1.3 2.8.9 3.3.9.5 0 1.7-.6 1.9-1.2.2-.6.2-1.1.1-1.2 0-.1-.2-.1-.3-.2z"/>
-            </svg>
-            Réserver sur WhatsApp
-          </a>
-          <a class="btn" href="#offre">Voir l’offre</a>
-        </div>
-        <p class="small muted" style="margin-top:10px">Paris intra-muros & proche banlieue · 7/7 selon disponibilités</p>
-      </div>
-
+    <h2>L’offre inclut</h2>
+    <div class="grid">
       <div class="card">
-        <div style="display:flex;justify-content:space-between;align-items:center;gap:10px">
-          <div>
-            <div class="small muted">Forfait unique</div>
-            <div class="price">60€ TTC</div>
-          </div>
-          <span class="badge">Studio / T1</span>
-        </div>
-        <ul class="list">
-          <li>• Ménage complet (sols, surfaces, cuisine, salle de bain)</li>
-          <li>• Linge collecté, lavé, séché, remis en place (lit fait)</li>
-          <li>• Photos avant / après + signalement anomalies</li>
-          <li>• Paiement après passage (CB, virement)</li>
+        <h3>Ménage</h3>
+        <ul>
+          <li>Surfaces & poussière</li>
+          <li>Cuisine & électroménager</li>
+          <li>Sanitaires/buanderie</li>
+          <li>Sols aspirés & lavés</li>
         </ul>
       </div>
-    </section>
-
-    <!-- Offre -->
-    <section id="offre" class="section">
-      <h2 style="margin:0 0 10px">L’offre à 60€ TTC</h2>
-      <p class="muted" style="margin:0 0 16px">Pensée pour les turnovers rapides de studios et T1 (≤ 35 m²).</p>
-      <div class="grid">
-        <div class="feature">
-          <strong>Ménage</strong>
-          <ul class="list">
-            <li>Surfaces & poussière</li>
-            <li>Cuisine & électroménager extérieur</li>
-            <li>Sanitaires/douche désinfectés</li>
-            <li>Sols aspirés & lavés</li>
-          </ul>
-        </div>
-        <div class="feature">
-          <strong>Linge</strong>
-          <ul class="list">
-            <li>Collecte sur place</li>
-            <li>Lavage & séchage</li>
-            <li>Repassage léger</li>
-            <li>Remise en place (lit fait)</li>
-          </ul>
-        </div>
-        <div class="feature">
-          <strong>Contrôle</strong>
-          <ul class="list">
-            <li>Photos avant / après</li>
-            <li>Signalement anomalies</li>
-            <li>Envoi par WhatsApp</li>
-            <li>Check rapide équipements</li>
-          </ul>
-        </div>
+      <div class="card">
+        <h3>Linge</h3>
+        <ul>
+          <li>Collecte sur place</li>
+          <li>Lavage & séchage</li>
+          <li>Repassage léger</li>
+          <li>Remise en place (lit fait)</li>
+        </ul>
       </div>
-      <div class="card" style="margin-top:14px">
-        <span class="small"><strong>Conditions claires :</strong> forfait valable pour ≤ 35 m², linge standard 1 lit double + 2 serviettes/pers. <strong>Suppléments</strong> (sur devis) : surface > 35 m², canapés-lits, linge supplémentaire, départs tardifs, taches difficiles, zones hors périmètre.</span>
+      <div class="card">
+        <h3>Contrôle</h3>
+        <ul>
+          <li>Photos avant / après</li>
+          <li>Signalement anomalies</li>
+          <li>Envoi par WhatsApp</li>
+          <li>Check rapide équipements</li>
+        </ul>
       </div>
-    </section>
+    </div>
 
-    <!-- Zones -->
-    <section id="zones" class="section">
-      <h2 style="margin:0 0 10px">Zones couvertes</h2>
-      <p class="muted">Paris intra-muros. Boulogne, Levallois, Neuilly, Vincennes, Saint-Mandé, Charenton, Montreuil : +5€ déplacement.</p>
-    </section>
+    <h2>Zones couvertes</h2>
+    <p>
+      Paris intra-muros, Boulogne, Levallois, Neuilly, Vincennes,  
+      Saint-Mandé, Charenton, Montreuil (+5€ déplacement).
+    </p>
 
-    <!-- Contact -->
-    <section id="contact" class="section card" style="text-align:center">
-      <h2 style="margin:0 0 10px">Réserver un passage</h2>
-      <p class="muted" style="margin:0 0 12px">WhatsApp direct ou e-mail — réponse rapide.</p>
-      <div class="row" style="justify-content:center">
-        <a class="btn-wa" href="https://wa.me/33682141764?text=Bonjour%2C+je+souhaite+r%C3%A9server+le+forfait+M%C3%A9nage+%2B+Linge+%C3%A0+60%E2%82%AC+pour+mon+Airbnb." target="_blank" rel="noopener">
-          <svg class="wa-ico" viewBox="0 0 32 32" fill="none"><path fill="white" d="M16 3C9.4 3 4 8.3 4 14.9c0 2.6.9 5 2.4 7L4 29l7.3-2.3c1.9 1 4.1 1.6 6.7 1.6 6.6 0 12-5.3 12-11.9C30 8.3 24.6 3 18 3h-2z"/><path fill="#25D366" d="M16 5.2c6 0 10.8 4.7 10.8 10.6S22 26.4 16 26.4c-2.2 0-4.2-.6-5.9-1.6l-.4-.2-3.9 1.2 1.3-3.7-.3-.4c-1.3-1.7-2.1-3.8-2.1-6 0-5.9 4.9-10.5 11.1-10.5z"/><path fill="white" d="M21.9 19.4c-.3-.1-1.8-.9-2.1-1-.3-.1-.5-.1-.7.2s-.8 1-1 .1c-.2-.1-.9-.3-1.7-1.1-.6-.6-1.1-1.3-1.3-1.5-.3-.6 0-.7.2-1 .2-.2.3-.4.5-.6.2-.2.3-.4.5-.7.1-.3 0-.5 0-.7 0-.2-.7-1.7-.9-2.3-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1 2.9 1.1 3.1c.1.2 2 3.2 4.8 4.5 2.8 1.3 2.8.9 3.3.9.5 0 1.7-.6 1.9-1.2.2-.6.2-1.1.1-1.2 0-.1-.2-.1-.3-.2z"/></svg>
-          WhatsApp : +33 6 82 14 17 64
-        </a>
-        <a class="btn" href="mailto:contact@menage60.fr">contact@menage60.fr</a>
-      </div>
-    </section>
+    <div style="text-align: center; margin-top: 25px;">
+      <a class="btn-whatsapp" href="https://wa.me/33682141764?text=Bonjour%2C+je+veux+réserver+un+ménage+et+linge+à+60€" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+        Réserver via WhatsApp
+      </a>
+      <p style="margin-top: 10px;">ou par email : <a href="mailto:contact@menage60.fr">contact@menage60.fr</a></p>
+    </div>
   </div>
 
   <footer>
-    <div class="wrap foot-row small">
-      <div class="brand"><span class="logo">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 12h16M12 4v16"/></svg>
-      </span>Ménage + Linge · 60€</div>
-      <div>© 2025 — SIRET & Mentions légales à compléter</div>
-    </div>
+    <p>Contact : contact@menage60.fr | WhatsApp : +33 6 82 14 17 64</p>
+    <p>© 2025 Ménage60 – Mentions légales</p>
   </footer>
-
-  <!-- Données structurées basiques -->
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"LocalBusiness",
-    "name":"Ménage + Linge 60€",
-    "areaServed":"Paris",
-    "description":"Turnover Airbnb : ménage complet + linge. Forfait 60€ TTC pour studios/T1.",
-    "telephone":"+33682141764",
-    "url":"https://menage60.netlify.app",
-    "offers":{"@type":"Offer","price":"60","priceCurrency":"EUR"}
-  }
-  </script>
 </body>
 </html>
